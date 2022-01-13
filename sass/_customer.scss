@@ -1,0 +1,135 @@
+.customer {
+  padding-top: var(--spacing-section);
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 208px;
+    position: relative;
+  }
+  &-bg {
+    position: absolute;
+    z-index: -5;
+  }
+  &-main {
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 0 20px;
+  }
+  &-items {
+    width: 100%;
+    background-color: $light-color;
+    padding: 28px 27px 21px;
+    box-shadow: 0px 8px 55px rgba(155, 162, 173, 0.17);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    & + & {
+      margin-top: 20px;
+    }
+  }
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &-top__rate {
+    display: flex;
+    align-items: center;
+    gap: 0 3px;
+    span {
+      font-weight: 500;
+      font-size: 14px;
+      color: #000;
+      line-height: 137%;
+    }
+  }
+  &-items__name {
+    color: $dark-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 85%;
+    padding: 7px 0 2px;
+  }
+  &-items__job {
+    color: #949cb7;
+    font-weight: 500;
+    font-size: 7px;
+    line-height: 157%;
+    padding-top: 2px;
+  }
+  &-items__desc {
+    color: #79899d;
+    font-size: 10px;
+    line-height: 140%;
+    padding: 8px 0 24px;
+  }
+  &-items__quote {
+    margin-left: auto;
+  }
+  &-content {
+    max-width: 400px;
+    width: 100%;
+  }
+  &-content__group {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+  }
+  &-content__count {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 104%;
+    color: $primary-color;
+  }
+  &-content__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162%;
+    color: #8189a3;
+  }
+  &-heading {
+    padding: 11px 0 25px;
+  }
+  &-btn {
+    padding: 18px 30px;
+    margin-top: 34px;
+  }
+  @media only screen and (max-width: 1279px) {
+    &__container {
+      gap: 0 60px;
+    }
+  }
+  @media only screen and (max-width: 1023px) {
+    &__container {
+      gap: 0 40px !important;
+    }
+    &-main {
+      padding-left: 0;
+    }
+    &-bg {
+      display: none;
+    }
+    &-btn {
+      padding: 12px 20px;
+      margin-top: 20px;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &__container {
+      flex-direction: column-reverse;
+      gap: 25px 0 !important;
+    }
+    &-main {
+      grid-template-columns: 1fr;
+    }
+    &-items + &-items {
+      margin-bottom: 20px;
+    }
+  }
+}

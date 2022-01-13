@@ -1,0 +1,24 @@
+$primary-color: #ff7d00;
+$dark-color: #051441;
+$light-color: #ffff;
+$purple-color: #5a73e5;
+$purple-blur: #F4F8FD;
+$gray-color: #635f85;
+$gray-dark: #5d677e;
+$gray-light: #79899D;
+$font-primary: "Poppins", sans-serif;
+$wrapper: 1127px;
+$full-body: 1440px;
+
+:root {
+  --spacing-section: 140px;
+  @media only screen and (max-width: 1279px) {
+    --spacing-section: 100px
+  }
+  @media only screen and (max-width: 1023px) {
+    --spacing-section: 70px
+  }
+  @media only screen and (max-width: 1023px) {
+    --spacing-section: 50px
+  }
+}
